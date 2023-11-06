@@ -1,0 +1,82 @@
+hyperskill_project:
+  id: 393
+  ide_files: https://cogniterra.org/media/attachments/lesson/33466/additional_files.json
+  is_template_based: false
+  use_ide: true
+update_date: "Mon, 06 Nov 2023 07:45:12 UTC"
+stages:
+  - id: 2326
+    step: 37574
+    is_completed: true
+  - id: 2327
+    step: 37575
+    is_completed: false
+  - id: 2328
+    step: 37576
+    is_completed: false
+topics:
+  0:
+    - title: Comments
+      theory_id: 8170
+    - title: Naming variables
+      theory_id: 8364
+    - title: Introduction to JavaScript
+      theory_id: 8016
+    - title: Overview of the basic program
+      theory_id: 8154
+    - title: Multi-line programs
+      theory_id: 8162
+    - title: Variables
+      theory_id: 8186
+  1:
+    - title: Introduction to Node.js
+      theory_id: 12691
+    - title: What is npm
+      theory_id: 13256
+    - title: Command line overview
+      theory_id: 8977
+    - title: Parameters and Options
+      theory_id: 9746
+    - title: Strings and numbers
+      theory_id: 8194
+    - title: CommonJS modules
+      theory_id: 23897
+    - title: What is a package manager?
+      theory_id: 26248
+    - title: Taking input
+      theory_id: 31844
+  2:
+    - title: Arithmetic operators
+      theory_id: 8372
+    - title: Functions
+      theory_id: 8388
+    - title: Defining functions
+      theory_id: 24012
+    - title: Anonymous Function
+      theory_id: 26924
+    - title: Arrow Functions
+      theory_id: 8455
+    - title: Introduction to Arrays
+      theory_id: 16141
+    - title: Array creation
+      theory_id: 16356
+    - title: JSON
+      theory_id: 6854
+    - title: Introduction to Objects
+      theory_id: 8588
+    - title: Null and Undefined
+      theory_id: 8564
+    - title: Boolean and Logical Operators
+      theory_id: 8471
+    - title: Type Conversion
+      theory_id: 8380
+    - title: Comparison Operators
+      theory_id: 8580
+    - title: Conditional Operators
+      theory_id: 8889
+    - title: Increment and Decrement
+      theory_id: 9102
+    - title: For Loops
+      theory_id: 9119
+    - title: While Loops
+      theory_id: 9128

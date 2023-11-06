@@ -1,0 +1,18 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  sync-input:
+    specifier: https://github.com/hyperskill/sync-input/archive/v1.tar.gz
+    version: '@github.com/hyperskill/sync-input/archive/v1.tar.gz'
+
+packages:
+
+  '@github.com/hyperskill/sync-input/archive/v1.tar.gz':
+    resolution: {tarball: https://github.com/hyperskill/sync-input/archive/v1.tar.gz}
+    name: sync-input
+    version: 1.0.0
+    dev: false
