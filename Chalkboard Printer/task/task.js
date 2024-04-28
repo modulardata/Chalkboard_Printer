@@ -1,9 +1,10 @@
-'use strict';
+const input = require('sync-input');
+
 
 function solution() {
-    let name = 'Bart';
-    let surname = 'Simpson';
-    let message = 'I will not skateboard in the halls.';
+    let name = input("Enter your name: ");
+    let surname = input("Enter your surname: ");
+    let message = input("Enter your message: ");
 
     console.log(`This is ${name} ${surname} and ${message}`);
     console.log(`This is ${name} ${surname} and ${message}`);
