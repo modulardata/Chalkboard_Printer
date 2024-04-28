@@ -3,7 +3,7 @@ from hstest import StageTest, CheckResult, dynamic_test, TestedProgram
 
 class Feedback:
     contain_msg = "Your output should contain the following message:\n"
-    repeat_msg = "You should repeat the message 5 times. Your repeat number: "
+    repeat_msg = "You should repeat the message as given times. Your repeat number: "
     wait_input = "Your program should wait for user input."
 
 
@@ -11,19 +11,24 @@ class ChalkboardPrinterTest(StageTest):
     prompts = [
         {"name": "Bart",
          "surname": "Simpson",
-         "msg": "I will not skateboard in the halls."},
+         "msg": "I will not skateboard in the halls.",
+         "repeat": "20"},
         {"name": "Homer",
          "surname": "Simpson",
-         "msg": "I will not teach others to fly."},
+         "msg": "I will not teach others to fly.",
+         "repeat": "30"},
         {"name": "Lisa",
          "surname": "Simpson",
-         "msg": "I will not bring sheep to class."},
+         "msg": "I will not bring sheep to class.",
+         "repeat": "40"},
         {"name": "Marge",
          "surname": "Simpson",
-         "msg": "I will not eat things for money."},
+         "msg": "I will not eat things for money.",
+         "repeat": "50"},
         {"name": "Maggie",
          "surname": "Simpson",
-         "msg": "I will not hide the teacher's medication."}
+         "msg": "I will not hide the teacher's medication.",
+         "repeat": "60"}
     ]
 
     # test if the output is correct
@@ -41,13 +46,17 @@ class ChalkboardPrinterTest(StageTest):
             if not main.is_waiting_input():
                 return CheckResult.wrong(Feedback.wait_input)
 
-            output = main.execute(prompt['msg'])
+            main.execute(prompt['msg'])
+            if not main.is_waiting_input():
+                return CheckResult.wrong(Feedback.wait_input)
+
+            output = main.execute(prompt['repeat'])
             if message.strip() not in output.strip():
                 return CheckResult.wrong(Feedback.contain_msg + message)
 
-            # test if the message is repeated 5 times
+            # test if the message is repeated given times
             repeated_msg = output.strip().split("\n")
-            if len(repeated_msg) != 5:
+            if len(repeated_msg) != int(prompt['repeat']):
                 return CheckResult.wrong(Feedback.repeat_msg + str(len(repeated_msg)))
             return CheckResult.correct()
 
